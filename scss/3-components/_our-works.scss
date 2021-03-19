@@ -1,0 +1,60 @@
+#our-works {
+  button {
+    margin-top: 3.75rem;
+  }
+
+  .wrapper {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+
+    article {
+      display: flex;
+      width: 90%;
+      max-width: 22.5em;
+      height: 22.5em;
+      margin: 1.52em auto;
+      border-radius: 0.625em;
+
+      &:nth-of-type(1) {
+        @include BgImg("../img/portfolio-1.png", cover);
+      }
+      &:nth-of-type(2) {
+        @include BgImg("../img/portfolio-2.png", cover);
+      }
+      &:nth-of-type(3) {
+        @include BgImg("../img/portfolio-3.png", cover);
+      }
+      &:nth-of-type(4) {
+        @include BgImg("../img/portfolio-4.png", cover);
+      }
+      &:nth-of-type(5) {
+        @include BgImg("../img/portfolio-5.png", cover);
+      }
+      &:nth-of-type(6) {
+        @include BgImg("../img/portfolio-6.png", cover);
+      }
+
+      .description {
+        @include flex(column, center, center);
+        display: none;
+        color: color(primary);
+        background: rgba(color(ancient), 0.9);
+        padding: 2.5rem;
+        border-radius: 0.625em;
+      }
+
+      &:hover .description {
+        display: flex;
+      }
+
+      h4 {
+        text-transform: uppercase;
+        font-size: 0.93em;
+      }
+
+      p {
+        color: color(primary);
+      }
+    }
+  }
+}

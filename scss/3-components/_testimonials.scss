@@ -1,0 +1,41 @@
+.testimonials {
+  @include BgImg("../img/testimonials-background.jpg", cover);
+
+  article {
+    @include flex(column, center, center);
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding: 6.25em 0;
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 1.31rem;
+      height: 2.5rem;
+    }
+    &::before {
+      @include centerWithAbsolute(0, 50%);
+      @include BgImg("../img/arrow-left.png", contain);
+    }
+    &::after {
+      @include centerWithAbsolute(100%, 50%);
+      @include BgImg("../img/arrow-right.png", contain);
+    }
+
+    p {
+      color: color(primary);
+
+      &.quote {
+        font-size: 1.5rem;
+        font-style: italic;
+
+        @include mq(medium) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

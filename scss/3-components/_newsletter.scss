@@ -1,0 +1,35 @@
+.newsletter {
+  @include flex(row, center, center);
+  width: 100%;
+  padding: 7.5em 0.625em;
+  @include BgImg("../img/newsletter-background.jpg", cover);
+
+  form {
+    width: 100%;
+    @include flex(row, center, center);
+
+    @include mq(extraLarge) {
+      @include flex(column, inherit, center);
+    }
+  }
+  input {
+    height: 3.125em;
+    border-radius: 0.625em;
+    border: 0;
+
+    &[type="email"] {
+      width: 100%;
+      max-width: 50rem;
+      padding: 0 1.25rem;
+    }
+
+    &[type="submit"] {
+      margin-left: 1.25rem;
+
+      @include mq(extraLarge) {
+        margin-top: 0.8rem;
+        margin-left: 0;
+      }
+    }
+  }
+}

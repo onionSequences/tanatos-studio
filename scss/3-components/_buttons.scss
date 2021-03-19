@@ -1,0 +1,48 @@
+.btn {
+  color: color(primary);
+  background: none;
+  display: inline-block;
+  height: 3.125em;
+  width: 13.125em;
+  border: 1px solid color(primaryTransparent);
+  text-transform: uppercase;
+  border-radius: 0.625rem;
+  line-height: 3.125em;
+  transition: background 300ms ease, border 300ms ease;
+
+  &:hover {
+    background: color(ancient);
+    border: 1px solid color(primaryTransparent);
+  }
+}
+
+/* Buttons v2 - for newsletter */
+.active-btn {
+  @extend .btn;
+  border: 0;
+  background: color(ancient);
+  transition: background 300ms ease;
+
+  &:hover {
+    background: color(darkAncient);
+    border: 0;
+  }
+}
+
+/* Button v3 - for our works */
+.btn-inverted:hover {
+  background: color(primary);
+  color: color(ancient);
+  border: none;
+}
+
+/* Button v4 - for show more */
+.btn-black {
+  @extend .btn;
+  color: color(secondary);
+  border: 1px solid color(secondaryTransparent);
+
+  &:hover {
+    color: color(primary);
+  }
+}

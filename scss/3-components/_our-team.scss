@@ -1,0 +1,42 @@
+#our-team {
+  .wrapper {
+    @include flex(row, center, flex-start);
+    flex-wrap: wrap;
+    margin-top: 5rem;
+  }
+
+  article {
+    filter: grayscale(100%);
+    width: 100%;
+    max-width: 18.75rem;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+
+    &:hover > img {
+      border-bottom: 3px solid #f7600e;
+      transform: matrix(1.1, 0, 0, 1.1, 0, -11);
+      cursor: pointer;
+    }
+
+    h4 {
+      margin-top: 1.25rem;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      padding: 0 1.25rem;
+    }
+  }
+
+  .social {
+    margin-top: 1.25rem;
+
+    img {
+      width: 1.56rem;
+      margin-left: 0.93em;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+@import "./1-abstracts/variables";
+@import "./1-abstracts/mixins";
+@import "./1-abstracts/functions";
+
+@import "./2-base/generals";
+
+@import "./3-components/navigation";
+@import "./3-components/hero-image";
+@import "./3-components/our-services";
+@import "./3-components/newsletter";
+@import "./3-components/our-works";
+@import "./3-components/testimonials";
+@import "./3-components/our-team";
+@import "./3-components/contact-form";
+@import "./3-components/buttons";
+
+@import "./4-layout/header";
+@import "./4-layout/main";
+@import "./4-layout/footer";

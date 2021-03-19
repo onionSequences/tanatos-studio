@@ -1,0 +1,71 @@
+#contact {
+  @include BgImg("../img/contact-background.jpg", cover);
+  padding: 6.25rem 0;
+  margin-bottom: 0;
+
+  .section-title,
+  p {
+    color: color(primary);
+
+    @include mq(large) {
+      padding: 0 1.5rem;
+    }
+  }
+
+  form {
+    @include flex(column, inherit, inherit);
+    padding: 0 6.25em;
+
+    @include mq(large) {
+      padding: 0px 1.25rem;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 49%;
+      height: 3.125rem;
+      margin-bottom: 1.25em;
+      padding-left: 1.25em;
+      border-radius: 0.625em;
+      border: 0;
+
+      @include mq(large) {
+        width: 100%;
+      }
+    }
+
+    textarea {
+      padding: 1.25rem;
+      border-radius: 0.625em;
+      border: 0;
+    }
+
+    .informations {
+      width: 100%;
+      @include flex(row, space-between, inherit);
+
+      @include mq(large) {
+        flex-wrap: wrap;
+      }
+    }
+
+    .wrapper {
+      @include flex(row, space-between, center);
+      margin-top: 1.25em;
+
+      @include mq(large) {
+        flex-direction: column;
+      }
+
+      .social {
+        @include mq(large) {
+          margin-top: 3.125rem;
+        }
+      }
+
+      img {
+        margin-left: 0.93rem;
+      }
+    }
+  }
+}

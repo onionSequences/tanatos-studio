@@ -1,0 +1,55 @@
+.hero-image {
+  position: relative;
+  height: 50rem;
+  @include flex(column, center, center);
+  @include BgImg("../img/main-banner.jpg", cover);
+
+  .wrapper {
+    margin-top: 0;
+    text-align: center;
+
+    @include mq(large) {
+      padding: 0 0.625em;
+    }
+  }
+
+  h2,
+  p {
+    color: color(primary);
+  }
+
+  h2 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    @include mq(medium) {
+      font-size: 3.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+
+    @include mq(extraLarge) {
+      font-size: 1rem;
+    }
+    @include mq(medium) {
+      font-size: 0.9rem;
+    }
+  }
+
+  a:nth-child(1n) {
+    margin-right: 1.875em;
+
+    @include mq(medium) {
+      margin-right: 0;
+      margin-top: 1.875em;
+    }
+  }
+
+  .btn-next-section {
+    position: absolute;
+    bottom: 1.5rem;
+  }
+}

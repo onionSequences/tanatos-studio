@@ -1,0 +1,23 @@
+#our-services {
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  text-align: center;
+
+  article {
+    @include flex(column, center, center);
+    width: 100%;
+    max-width: 12.5em;
+    margin: 0 3.125em;
+  }
+  .services-icon {
+    @include flex(row, center, center);
+    height: 9.375rem;
+    width: 9.375rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid color(service-border);
+    border-radius: 50%;
+  }
+  article h4 {
+    text-transform: uppercase;
+  }
+}

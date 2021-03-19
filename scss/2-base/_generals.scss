@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include no-margin-no-padding;
+  font-family: $font;
+}
+
+.clearfix:after,
+.clearfix:before {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+section {
+  text-align: center;
+}
+
+p {
+  color: color(p-color);
+  line-height: 1.5;
+}
+
+ul {
+  display: flex;
+  @include no-margin-no-padding;
+  list-style-type: none;
+}
+
+a {
+  color: color(link-color);
+  text-decoration: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.full-width,
+.fixed {
+  width: 100%;
+  margin: 6.75rem auto;
+}
+
+.fixed {
+  max-width: 75rem;
+}

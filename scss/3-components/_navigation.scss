@@ -1,0 +1,39 @@
+.menu {
+  clip-path: circle(0);
+  height: 100%;
+  width: 100%;
+  background: #3b434c;
+  position: fixed;
+  z-index: 1;
+  @include flex(row, center, center);
+
+  ul {
+    @include flex(column, center, center);
+  }
+
+  li {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: color(primary);
+    padding: 20px;
+
+    &:hover {
+      color: color(ancient);
+    }
+  }
+
+  .close-icon {
+    @include BgImg("../img/close.png", cover);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    cursor: pointer;
+  }
+}

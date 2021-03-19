@@ -1,0 +1,18 @@
+$font: "Open Sans", sans-serif;
+$colors: (
+  ancient: #f7600e,
+  darkAncient: darken(#f7600e, 15%),
+  primary: #fff,
+  primaryTransparent: rgba(255, 255, 255, 0.2),
+  secondary: #000,
+  secondaryTransparent: rgba(0, 0, 0, 0.2),
+  link-color: #5e5e5e,
+  p-color: #3b434c,
+  service-border: rgba(59, 67, 76, 0.302),
+);
+$breakpoints: (
+  small: 441px,
+  medium: 523px,
+  large: 733px,
+  extraLarge: 1066px,
+);
